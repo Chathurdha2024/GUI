@@ -86,25 +86,9 @@ OnlineFoodOrderingSystem/
 3. Configure the database connection string in `App.config`.
 4. Build and run the application.
 
----
 
-## 🖼️ Screenshots
 
-### 🌐 Web Application
-- **Homepage**  
-  ![Homepage](./assets/web-homepage.png)
 
-- **Food Menu**  
-  ![Food Menu](./assets/web-menu.png)
-
-### 🖥️ Desktop Application
-- **Dashboard**  
-  ![Dashboard](./assets/desktop-dashboard.png)
-
-- **Order Management**  
-  ![Order Management](./assets/desktop-orders.png)
-
----
 
 ## 🔗 API Reference
 
