@@ -1,0 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;/*adding css for all elements in the html file*/
+}
+
+body{
+  min-height: 100vh;/*adding css for body section*/
+}
+
+a{
+  text-decoration: none;/*adding css to anchor tags*/
+  color: inherit;
+}
