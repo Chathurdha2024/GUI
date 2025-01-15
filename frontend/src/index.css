@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;/*adding css for all elements in the html file*/
   font-family: Outfit;/*Getting the google fonts for the whole site*/
+  scroll-behavior: smooth;
 }
 
 body{
