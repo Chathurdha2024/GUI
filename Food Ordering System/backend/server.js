@@ -26,9 +26,15 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
         password TEXT
       )
     `);
+<<<<<<< HEAD
 // Create foods table
 db.run(`
   CREATE TABLE IF NOT EXISTS foods (
+=======
+// Create books table
+db.run(`
+  CREATE TABLE IF NOT EXISTS books (
+>>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     price REAL,
@@ -43,8 +49,13 @@ db.run(`
 });
 
 // API endpoint to get books
+<<<<<<< HEAD
 app.get('/books', (req, res) => {
   const query = 'SELECT * FROM books';
+=======
+app.get('/foods', (req, res) => {
+  const query = 'SELECT * FROM foods';
+>>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
   db.all(query, [], (err, rows) => {
       if (err) {
           res.status(500).json({ error: err.message });
@@ -156,4 +167,8 @@ app.put('/api/update-profile/:id', (req, res) => {
 // ==================== Server Listener ====================
 app.listen(port, 'localhost', () => {
   console.log(`Server is running at http://localhost:${port}`);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
