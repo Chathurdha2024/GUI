@@ -4,9 +4,53 @@ import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
-  
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
   const navigate = useNavigate();
+
+  // Handle Proceed to Checkout
+  const handleCheckout = async () => {
+    const userId = 1; // Replace with dynamic user ID (e.g., from context, localStorage)
+
+    // Prepare the cart items in the correct format
+    const cartData = Object.entries(cartItems).map(([foodId, quantity]) => {
+      const food = food_list.find((item) => item._id === foodId);
+      return {
+        food_id: foodId,
+        quantity,
+        total_price: food.price * quantity,
+      };
+    });
+
+    if (cartData.length === 0) {
+      alert("Your cart is empty. Please add items to proceed.");
+      return;
+    }
+
+    console.log("Sending cart data:", cartData); // Debugging line
+
+    try {
+      const response = await fetch("http://localhost:5000/api/add-to-cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId, cartItems: cartData }),
+      });
+
+      const data = await response.json();
+      console.log("Server Response:", data); // Debugging line
+
+      if (response.ok) {
+        alert("Cart items added to the database!");
+        navigate("/checkout"); // Redirect to checkout page
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (error) {
+      console.error("Error adding cart to database:", error);
+    }
+  };
 
   return (
     <div className="cart">
@@ -23,9 +67,8 @@ const Cart = () => {
         <hr />
         {food_list.map((item, index) => {
           if (cartItems[item._id] > 0) {
-            /*cartItems - number of items in the cart of a specific id*/
             return (
-              <div>
+              <div key={index}>
                 <div className="cart-items-title cart-items-item">
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
@@ -40,6 +83,7 @@ const Cart = () => {
               </div>
             );
           }
+          return null;
         })}
       </div>
       <div className="cart-bottom">
@@ -53,24 +97,17 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>{/*If the cart total is 0,delivery charge also become 0. Otherwise it is $2*/}
+              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+              <b>
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+              </b>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
-        </div>
-        <div className="cart-promocode">
-          <div>
-            <p>If you have a promo code, Enter it here</p>
-            <div className="cart-promocode-input">
-              <input type="text" placeholder="promocode" />
-              <button>Submit</button>
-            </div>
-          </div>
+          <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
         </div>
       </div>
     </div>

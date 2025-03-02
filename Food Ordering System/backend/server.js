@@ -26,47 +26,77 @@ const db = new sqlite3.Database('./database.sqlite', (err) => {
         password TEXT
       )
     `);
-<<<<<<< HEAD
-// Create foods table
-db.run(`
-  CREATE TABLE IF NOT EXISTS foods (
-=======
-// Create books table
-db.run(`
-  CREATE TABLE IF NOT EXISTS books (
->>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    price REAL,
-    description TEXT,
-    image TEXT,
-    category TEXT
-  )
-`, () => {
-  console.log('Foods table is ready.');
-});
-}
-});
 
-// API endpoint to get books
-<<<<<<< HEAD
-app.get('/books', (req, res) => {
-  const query = 'SELECT * FROM books';
-=======
-app.get('/foods', (req, res) => {
-  const query = 'SELECT * FROM foods';
->>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
-  db.all(query, [], (err, rows) => {
-      if (err) {
-          res.status(500).json({ error: err.message });
-          return;
-      }
-      res.json(rows);
-  });
+    // Create foods table
+    db.run(`
+      CREATE TABLE IF NOT EXISTS foods (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        price REAL,
+        description TEXT,
+        image TEXT,
+        category TEXT
+      )
+    `, () => {
+      console.log('Foods table is ready.');
+    });
+
+    // Create cart_items table without the total_price column
+    db.run(`
+      CREATE TABLE IF NOT EXISTS cart_items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER,
+        food_id INTEGER,
+        quantity INTEGER,
+        FOREIGN KEY (user_id) REFERENCES users(id),
+        FOREIGN KEY (food_id) REFERENCES foods(id)
+      )
+    `, () => {
+      console.log('Cart items table is ready.');
+    });
+  }
 });
 
+// ==================== API Endpoints ====================
 
- 
+// API to add cart items to the database
+app.post('/api/add-to-cart', (req, res) => {
+  const { userId, cartItems } = req.body;
+
+  if (!userId || !cartItems || cartItems.length === 0) {
+    return res.status(400).send({ error: 'Invalid request. No cart items found.' });
+  }
+
+  // Prepare the insert query (no total_price)
+  const insertQuery = `INSERT INTO cart_items (user_id, food_id, quantity) VALUES (?, ?, ?)`;
+
+  const insertCartItems = () => {
+    return new Promise((resolve, reject) => {
+      const stmt = db.prepare(insertQuery);
+      let counter = 0;
+      let totalItems = cartItems.length;
+
+      // Loop through each cart item and insert it
+      cartItems.forEach(({ food_id, quantity }) => {
+        stmt.run([userId, food_id, quantity], (err) => {
+          if (err) {
+            console.error('Error inserting cart item:', err.message);
+            reject(err);
+          } else {
+            counter++;
+            if (counter === totalItems) {
+              stmt.finalize(() => resolve());
+            }
+          }
+        });
+      });
+    });
+  };
+
+  insertCartItems()
+    .then(() => res.status(200).send({ message: 'Cart items added successfully!' }))
+    .catch((err) => res.status(500).send({ error: 'Error adding cart items.' }));
+});
 
 // ==================== User Authentication ====================
 // Signup
@@ -92,74 +122,16 @@ app.post('/api/signup', (req, res) => {
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
 
-  if (!email || !password) {
-    return res.status(400).send({ error: 'Email and password are required.' });
-  }
-
-  const sql = `SELECT * FROM users WHERE email = ?`;
-  db.get(sql, [email], (err, row) => {
-    if (err) {
-      console.error('Error logging in:', err.message);
-      res.status(500).send({ error: 'Error logging in.' });
-    } else if (row && row.password === password) {
-      res.status(200).send({ message: 'Login successful!', userId: row.id });
-    } else {
-      res.status(400).send({ error: 'Invalid email or password.' });
-    }
-  });
-});
-
-app.post('/api/login', (req, res) => {
-  const { email, password } = req.body;
-
-  const sql =  `SELECT id, password FROM users WHERE email = ?`;
+  const sql = `SELECT id, password FROM users WHERE email = ?`;
 
   db.get(sql, [email], (err, row) => {
     if (err) {
       console.error('Error during login:', err.message);
       res.status(500).send({ error: 'Internal server error.' });
     } else if (row && row.password === password) {
-      res.status(200).send({ message: 'Login successful!', id: row.id, userName: row.name }); // Include user ID in response
+      res.status(200).send({ message: 'Login successful!', id: row.id });
     } else {
       res.status(400).send({ error: 'Invalid email or password.' });
-    }
-  });
-});
-
-// ==================== User Profile Management ====================
-// Get User Profile
-app.get('/api/profile/:id', (req, res) => {
-  const userId = req.params.id;
-
-  const sql = `SELECT id, name, email FROM users WHERE id = ?`;
-  db.get(sql, [userId], (err, row) => {
-    if (err) {
-      console.error('Error retrieving profile:', err.message);
-      res.status(500).send({ error: 'Error retrieving profile.' });
-    } else if (row) {
-      res.status(200).send({ profile: row });
-    } else {
-      res.status(404).send({ error: 'User not found.' });
-    }
-  });
-});
-
-// Update User Profile
-app.put('/api/update-profile/:id', (req, res) => {
-  const userId = req.params.id;
-  const { name, email, password } = req.body;
-
-  if (!name || !email || !password) {
-    return res.status(400).send({ error: 'All fields are required.' });
-  }
-
-  const sql = `UPDATE users SET name = ?, email = ?, password = ? WHERE id = ?`;
-  db.run(sql, [name, email, password, userId], function (err) {
-    if (err) {
-      console.error('Error updating profile:', err.message);
-      res.status(500).send({ error: 'Error updating profile.' });
-    } else {
-      res.status(200).send({ message: 'Profile updated successfully!' });
     }
   });
 });
@@ -167,8 +139,4 @@ app.put('/api/update-profile/:id', (req, res) => {
 // ==================== Server Listener ====================
 app.listen(port, 'localhost', () => {
   console.log(`Server is running at http://localhost:${port}`);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> b2401201ce823092ae9a160f1ae9fb8ba71fb560
