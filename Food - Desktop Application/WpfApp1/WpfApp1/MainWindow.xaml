@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowState="Maximized"
+        ResizeMode="NoResize">
+    <!--Border for all-->
+    <Border Background="Black" Padding="10">
+        <Grid Margin="10,10,10,10" Opacity="0.9">
+            <!--Adding a background image to the whole grid-->
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\ASUS\Pictures\pexels-ella-olsson-572949-1640770.jpg"/>
+            </Grid.Background>
+
+            <!--Adding textblock-->
+            <TextBlock Text="Welcome to Tomato!." 
+                       FontSize="55" FontWeight="Bold" Foreground="Black" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" Margin="20,10,0,0" />
+
+            <!-- Get Started Button -->
+            <Button  
+                    FontWeight="Bold" 
+                    FontSize="24"
+                    Margin="20"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Width="210" 
+                    Height="80" 
+                    Click="Get_Started" Cursor="Hand">
+                Get Started
+                <!--Designing the Button-->
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Tomato" CornerRadius="25" Padding="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+                <!--Hover property for Button-->
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <!-- Default Button Style -->
+                        <Setter Property="Background" Value="Orange"/>
+                        <Setter Property="Foreground" Value="Black"/>
+
+                        <Style.Triggers>
+                            <!-- Trigger when mouse hovers over the button -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <!-- Change the text color on hover -->
+                                <Setter Property="Foreground" Value="Yellow"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>

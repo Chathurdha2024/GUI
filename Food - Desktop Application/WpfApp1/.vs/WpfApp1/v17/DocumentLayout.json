@@ -1,0 +1,183 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\crud.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\crud.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\products.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\products.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\crud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\crud.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\products.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\products.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|c:\\users\\asus\\documents\\github\\gui\\food - desktop application\\wpfapp1\\wpfapp1\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C1F44F8-D73B-4445-B860-11FB8FBE120C}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Crud.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Crud.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Crud.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Crud.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Crud.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T21:33:53.507Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Products.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Products.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Products.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Products.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Products.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T20:02:26.95Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\LoginPage.xaml",
+              "RelativeToolTip": "WpfApp1\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T12:29:52.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Crud.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Crud.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Crud.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Crud.xaml",
+              "RelativeToolTip": "WpfApp1\\Crud.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T21:28:42.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\ProductDbContext.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\ProductDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\ProductDbContext.cs",
+              "RelativeToolTip": "WpfApp1\\ProductDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAACCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T20:13:31.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "food.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\food.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\food.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\food.cs",
+              "RelativeToolTip": "WpfApp1\\food.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T20:14:15.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Products.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Products.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Products.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\Products.xaml",
+              "RelativeToolTip": "WpfApp1\\Products.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T22:38:00.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T09:16:46.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T09:16:44.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\GUI\\Food - Desktop Application\\WpfApp1\\WpfApp1\\LoginPage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\LoginPage.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAjwCQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T13:31:58.138Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
