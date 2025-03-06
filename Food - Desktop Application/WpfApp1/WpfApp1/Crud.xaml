@@ -5,97 +5,102 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Crud"  Height="450" Width="800"
+        Title="Crud" Height="450" Width="800"
         ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="RoundedButton" TargetType="Button">
+            <Setter Property="Background" Value="#FF5722"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Width" Value="150"/>
+            <!-- Further reduced width -->
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF9800"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
-
-
         <TextBlock Text="Name" Margin="5"
-       Padding="5" FontSize="20"
-       Grid.Row="1" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="1" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-     x:Name="NameTextbox" Background="LightYellow" 
-     Grid.Row="1" Grid.Column="1"/>
+                 x:Name="NameTextbox" Background="LightYellow" 
+                 Grid.Row="1" Grid.Column="1"/>
 
         <TextBlock Text="Price" Margin="5"
-       Padding="5" FontSize="20"
-       Grid.Row="2" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="2" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-     x:Name="PriceTextbox" Background="LightYellow"
-     Grid.Row="2" Grid.Column="1"/>
+                 x:Name="PriceTextbox" Background="LightYellow"
+                 Grid.Row="2" Grid.Column="1"/>
 
         <TextBlock Text="Description" Margin="5"
-  Padding="5" FontSize="20"
-  Grid.Row="3" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="3" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-x:Name="DescriptionTextbox" Background="LightYellow"
-Grid.Row="3" Grid.Column="1"/>
+                 x:Name="DescriptionTextbox" Background="LightYellow"
+                 Grid.Row="3" Grid.Column="1"/>
 
         <TextBlock Text="Image" Margin="5"
-  Padding="5" FontSize="20"
-  Grid.Row="4" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="4" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-x:Name="ImageTextbox" Background="LightYellow"
-Grid.Row="4" Grid.Column="1"/>
+                 x:Name="ImageTextbox" Background="LightYellow"
+                 Grid.Row="4" Grid.Column="1"/>
 
         <TextBlock Text="Category" Margin="5"
-  Padding="5" FontSize="20"
-  Grid.Row="5" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="5" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-x:Name="CategoryTextbox" Background="LightYellow"
-Grid.Row="5" Grid.Column="1"/>
+                 x:Name="CategoryTextbox" Background="LightYellow"
+                 Grid.Row="5" Grid.Column="1"/>
 
         <TextBlock Text="Quantity" Margin="5"
-  Padding="5" FontSize="20"
-  Grid.Row="6" Grid.Column="0"/>
+                   Padding="5" FontSize="20"
+                   Grid.Row="6" Grid.Column="0"/>
         <TextBox Margin="5" Padding="5"
-x:Name="QuantityTextbox" Background="LightYellow"
-Grid.Row="6" Grid.Column="1"/>
+                 x:Name="QuantityTextbox" Background="LightYellow"
+                 Grid.Row="6" Grid.Column="1"/>
 
         <StackPanel Grid.Row="7" Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Orientation="Horizontal"
-                HorizontalAlignment="Right" Height="50">
-            <Button Content="Save" Width="100"
-                Click="Save_Product"
-                Height="50"
-                Padding="5" FontSize="20" RenderTransformOrigin="-0.208,0.509">
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="Orange" CornerRadius="25" Padding="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button Content="Cancel" Width="100"
-                    Click="Cancel"
-                Height="50"
-                Padding="5" FontSize="20">
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="Orange" CornerRadius="25" Padding="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <Button Style="{StaticResource RoundedButton}" Click="Save_Product" Cursor="Hand">Save</Button>
+            <Button Style="{StaticResource RoundedButton}" Click="Cancel" Cursor="Hand">Cancel</Button>
         </StackPanel>
 
     </Grid>

@@ -35,7 +35,7 @@
                 <!--Designing the Button-->
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="Tomato" CornerRadius="25" Padding="10">
+                        <Border Background="Tomato" CornerRadius="25" Padding="10" BorderBrush="Black" BorderThickness="3">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -46,12 +46,15 @@
                         <!-- Default Button Style -->
                         <Setter Property="Background" Value="Orange"/>
                         <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
 
                         <Style.Triggers>
                             <!-- Trigger when mouse hovers over the button -->
                             <Trigger Property="IsMouseOver" Value="True">
-                                <!-- Change the text color on hover -->
+                                <!-- Change the background color, text color, and border color on hover -->
+                                <Setter Property="Background" Value="DarkOrange"/>
                                 <Setter Property="Foreground" Value="Yellow"/>
+                                <Setter Property="BorderBrush" Value="White"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>

@@ -83,5 +83,11 @@ namespace WpfApp1
             }
         }
 
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            LoginPage loginpage = new LoginPage(); // Create an instance of MainWindow
+            loginpage.Show(); // Show the Main Window
+            this.Close();
+        }
     }
 }
