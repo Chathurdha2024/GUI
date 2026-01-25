@@ -3,13 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import StoreContextProvider from "./context/StoreContext.jsx";
+import ShopContextProvider from "./context/ShopContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    {/*Setting up the react router*/}
-    <StoreContextProvider>{/*getting the support of context API to the project*/}
+    <ShopContextProvider>
       <App />
-    </StoreContextProvider>
+    </ShopContextProvider>
   </BrowserRouter>
 );

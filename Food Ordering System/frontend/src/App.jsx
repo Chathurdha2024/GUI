@@ -1,28 +1,41 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Cart from "./pages/Cart/Cart";
-import Footer from "./components/Footer/Footer";
-import LoginPopup from "./components/LoginPopup/LoginPopup";
+import React from 'react'
+import {Routes,Route} from 'react-router-dom'
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Product from './pages/Product'
+import Cart from './pages/Cart'
+import Login from './pages/Login'
+import PlaceOrder from './pages/PlaceOrder'
+import Orders from './pages/Orders'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import SearchBar from './components/SearchBar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-
-const [showLogin,setShowLogin] = useState(false)
-
   return (
-    <>
-    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>} {/*if showLogin is true,LoginPopup will popup, if it is false it will return the fragment*/}
-      <div className="app">
-        <Navbar setShowLogin={setShowLogin} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </div>
-      <Footer />
-    </>
-  );
-};
+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'> {/*providing padding to different screen sizes as small,medium,large*/}
+      <ToastContainer />    {/*We can use notifications for this project*/}
+      <Navbar />  {/*This will display Navbar in all pages because it is mount outside of the Routes */}
+      <SearchBar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/menu' element={<Menu/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/product/:productId' element={<Product/>} />
+        <Route path='/cart' element={<Cart/>} /> 
+        <Route path='/login' element={<Login/>} />
+        <Route path='/place-order' element={<PlaceOrder/>} />
+        <Route path='/orders' element={<Orders/>} />
+      </Routes>
 
-export default App;
+      <Footer/>
+    </div>
+  )
+}
+
+export default App
