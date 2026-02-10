@@ -3,7 +3,7 @@
 
 
 
-# 🍴 Online Food Ordering System
+# 🍴 DishDirect - Online Food Ordering System
 
 **A dual-interface application for seamless food ordering and management.**  
 This project features a **Web Application** and a **Desktop Application**, each with unique features designed to cater to both customers and restaurant managers.
